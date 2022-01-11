@@ -1,3 +1,5 @@
+run `make bundle` before you do the `terraform apply`. 
+
 effected by bug: https://github.com/hashicorp/terraform-provider-aws/issues/12923
 
 
