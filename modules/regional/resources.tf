@@ -47,6 +47,7 @@ resource "aws_lambda_provisioned_concurrency_config" "example" {
 resource "aws_cloudwatch_event_rule" "every_minute" {
     name = "every-minute"
     schedule_expression = "cron(0/1 * * * ? *)"
+    tags = var.tags_to_use
 }
 
 resource "aws_cloudwatch_event_target" "check_foo_every_one" {
