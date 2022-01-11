@@ -25,7 +25,7 @@ resource "aws_lambda_function" "test_lambda" {
   function_name = "record_cron_delay_function"
   role          = var.function_role_arn
   handler       = "main.handler"
-
+  publish = true
   runtime = "python3.9"
 
   environment {
@@ -36,16 +36,11 @@ resource "aws_lambda_function" "test_lambda" {
   tags = var.tags_to_use
 }
 
-resource "aws_lambda_alias" "test_lambda_alias" {
-  name             = "my_alias"
-  function_name    = aws_lambda_function.test_lambda.arn
-  function_version = "1"
-}
 
 resource "aws_lambda_provisioned_concurrency_config" "example" {
   function_name                     = aws_lambda_function.test_lambda.arn
-  provisioned_concurrent_executions = 2
-  qualifier                         = aws_lambda_alias.test_lambda_alias.function_version
+  provisioned_concurrent_executions = 1
+  qualifier                         = aws_lambda_function.test_lambda.version
 }
 
 
