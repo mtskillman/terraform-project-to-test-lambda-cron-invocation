@@ -43,7 +43,6 @@ resource "aws_iam_role" "terraform_function_role" {
 resource "aws_iam_role_policy_attachment" "terraform_lambda_policy" {
   role       = aws_iam_role.terraform_function_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-  tags = var.tags_to_use
 }
 
 output "lambda_function_role_arn" {
