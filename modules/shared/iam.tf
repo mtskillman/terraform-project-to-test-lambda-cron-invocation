@@ -1,3 +1,7 @@
+variable "tags_to_use" {
+  type = map(string)
+}
+
 data "aws_caller_identity" "current" {}
 
 locals {
@@ -19,7 +23,6 @@ data "aws_iam_policy_document" "AWSLambdaTrustPolicy" {
 resource "aws_iam_role" "terraform_function_role" {
   name               = "terraform_function_role"
   assume_role_policy = data.aws_iam_policy_document.AWSLambdaTrustPolicy.json
-
   inline_policy {
     name = "my_inline_policy"
 
@@ -34,11 +37,13 @@ resource "aws_iam_role" "terraform_function_role" {
       ]
     })
   }
+  tags = var.tags_to_use
 }
 
 resource "aws_iam_role_policy_attachment" "terraform_lambda_policy" {
   role       = aws_iam_role.terraform_function_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  tags = var.tags_to_use
 }
 
 output "lambda_function_role_arn" {
