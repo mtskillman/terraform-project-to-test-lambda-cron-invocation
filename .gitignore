@@ -5,4 +5,3 @@ payload.zip
 terraform.tfstate*
 venv
 **/__pycache__/**
-**/results.json

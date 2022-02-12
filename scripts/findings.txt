@@ -1,0 +1,61 @@
+us-east-1,us-west-2,eu-west-1,eu-central-1,ap-northeast-1
+
+us-east-1 1 32.0
+us-east-1 25 32.0
+us-east-1 50 32.0
+us-east-1 75 32.0
+us-east-1 95 33.0
+us-east-1 99 33.0
+us-east-1 99.9 36.0
+us-east-1 99.99 65.2607999999891
+us-east-1 99.999 1034.759359993448
+us-east-1 99.9999 1752.2759360031341
+us-east-1 MAX 1832
+
+us-west-2 1 44.0
+us-west-2 25 44.0
+us-west-2 50 44.0
+us-west-2 75 44.0
+us-west-2 95 44.0
+us-west-2 99 45.0
+us-west-2 99.9 49.0
+us-west-2 99.99 62.0
+us-west-2 99.999 87.89671999991697
+us-west-2 99.9999 96.98967200003972
+us-west-2 MAX 98
+
+eu-west-1 1 14.0
+eu-west-1 25 14.0
+eu-west-1 50 14.0
+eu-west-1 75 14.0
+eu-west-1 95 14.0
+eu-west-1 99 15.0
+eu-west-1 99.9 15.0
+eu-west-1 99.99 22.222499999981665
+eu-west-1 99.999 27.540750000000116
+eu-west-1 99.9999 27.954075000001467
+eu-west-1 MAX 28
+
+eu-central-1 1 49.0
+eu-central-1 25 49.0
+eu-central-1 50 49.0
+eu-central-1 75 49.0
+eu-central-1 95 49.0
+eu-central-1 99 49.0
+eu-central-1 99.9 106.0
+eu-central-1 99.99 175.81519999999728
+eu-central-1 99.999 181.54075999999623
+eu-central-1 99.9999 181.9540760000018
+eu-central-1 MAX 182
+
+ap-northeast-1 1 6.0
+ap-northeast-1 25 6.0
+ap-northeast-1 50 6.0
+ap-northeast-1 75 6.0
+ap-northeast-1 95 6.0
+ap-northeast-1 99 7.0
+ap-northeast-1 99.9 7.0
+ap-northeast-1 99.99 9.0
+ap-northeast-1 99.999 19.32600000000093
+ap-northeast-1 99.9999 22.632600000011735
+ap-northeast-1 MAX 23
